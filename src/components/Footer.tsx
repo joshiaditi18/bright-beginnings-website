@@ -1,17 +1,37 @@
 import { Heart } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground py-10">
+    <footer className="bg-foreground py-10 relative overflow-hidden">
+      {/* Floating stars */}
+      {["⭐", "🌟", "✨"].map((star, i) => (
+        <motion.span
+          key={i}
+          className="absolute text-lg opacity-20"
+          style={{ left: `${20 + i * 30}%`, top: `${20 + i * 15}%` }}
+          animate={{ y: [0, -10, 0], opacity: [0.2, 0.4, 0.2] }}
+          transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}
+        >
+          {star}
+        </motion.span>
+      ))}
+
       <div className="container mx-auto px-4 text-center">
         <div className="flex items-center justify-center gap-2 mb-4">
-          <span className="text-2xl">🌈</span>
+          <motion.span
+            className="text-2xl"
+            animate={{ rotate: [0, 360] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+          >
+            🌈
+          </motion.span>
           <span className="font-display text-lg font-bold text-primary-foreground">
             Freedom Preschool & Daycare
           </span>
         </div>
         <p className="font-body text-sm text-primary-foreground/60 mb-6 max-w-md mx-auto">
-          Nurturing young minds with love, creativity, and care since Day One.
+          Nurturing young minds with love, creativity, and care since Day One. 💛
         </p>
         <div className="flex items-center justify-center gap-6 mb-6">
           {["Home", "About", "Programs", "Contact"].map((link) => (
