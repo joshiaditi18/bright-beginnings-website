@@ -3,10 +3,13 @@ import { motion } from "framer-motion";
 const galleryItems = [
   { label: "Colorful Classroom", color: "bg-primary/10", emoji: "🎨", hoverColor: "hover:bg-primary/20" },
   { label: "Outdoor Play Area", color: "bg-leaf/10", emoji: "🌳", hoverColor: "hover:bg-leaf/20" },
-  { label: "Art & Craft Time", color: "bg-sunshine/15", emoji: "✂️", hoverColor: "hover:bg-sunshine/25" },
-  { label: "Story Circle", color: "bg-pink/10", emoji: "📖", hoverColor: "hover:bg-pink/20" },
-  { label: "Music & Dance", color: "bg-primary/10", emoji: "🎵", hoverColor: "hover:bg-primary/20" },
-  { label: "Annual Day Event", color: "bg-sunshine/15", emoji: "🎉", hoverColor: "hover:bg-sunshine/25" },
+  { label: "Animal Corner", color: "bg-sunshine/15", emoji: "🐘", hoverColor: "hover:bg-sunshine/25" },
+  { label: "Indian Dance Day", color: "bg-pink/10", emoji: "💃", hoverColor: "hover:bg-pink/20" },
+  { label: "ABC Learning", color: "bg-primary/10", emoji: "🔤", hoverColor: "hover:bg-primary/20" },
+  { label: "Number Fun", color: "bg-sunshine/15", emoji: "🔢", hoverColor: "hover:bg-sunshine/25" },
+  { label: "Diwali Celebration", color: "bg-peach/30", emoji: "🪔", hoverColor: "hover:bg-peach/40" },
+  { label: "Story Circle", color: "bg-leaf/10", emoji: "📖", hoverColor: "hover:bg-leaf/20" },
+  { label: "Music & Bhajans", color: "bg-pink/10", emoji: "🎵", hoverColor: "hover:bg-pink/20" },
 ];
 
 const GallerySection = () => {

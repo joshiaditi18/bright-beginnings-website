@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Star, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-children.jpg";
 
-const floatingEmojis = ["⭐", "🎨", "📚", "🦋", "🌻", "🎵"];
+const floatingEmojis = ["⭐", "🐘", "📚", "🦚", "🔤", "🎵", "🪔", "🦁", "🔢"];
 
 const HeroSection = () => {
   return (
@@ -74,10 +74,32 @@ const HeroSection = () => {
             </motion.span>
           </h1>
 
-          <p className="font-body text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0 mb-8">
+          <p className="font-body text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0 mb-4">
             A safe, nurturing, and joyful learning space where your child discovers
             creativity, confidence, and a love for learning every single day.
           </p>
+
+          {/* Mini animated icons strip */}
+          <div className="flex gap-3 justify-center lg:justify-start mb-8 flex-wrap">
+            {[
+              { emoji: "🐘", label: "Animals" },
+              { emoji: "🔤", label: "ABCs" },
+              { emoji: "🔢", label: "123s" },
+              { emoji: "🇮🇳", label: "Culture" },
+              { emoji: "🎨", label: "Art" },
+              { emoji: "🎵", label: "Music" },
+            ].map((item, i) => (
+              <motion.div
+                key={item.label}
+                className="flex items-center gap-1.5 bg-card/80 backdrop-blur-sm rounded-full px-3 py-1.5 shadow-card"
+                animate={{ y: [0, -3, 0] }}
+                transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}
+              >
+                <span className="text-base">{item.emoji}</span>
+                <span className="font-body text-xs font-semibold text-muted-foreground">{item.label}</span>
+              </motion.div>
+            ))}
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <motion.a

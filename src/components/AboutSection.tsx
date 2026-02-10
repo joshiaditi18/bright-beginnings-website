@@ -4,8 +4,8 @@ import { Heart, Shield, Lightbulb, Smile } from "lucide-react";
 const values = [
   { icon: Heart, label: "Love & Care", emoji: "💖", color: "bg-pink/15 text-pink" },
   { icon: Shield, label: "Safety First", emoji: "🛡️", color: "bg-primary/15 text-primary" },
-  { icon: Lightbulb, label: "Creativity", emoji: "💡", color: "bg-sunshine/15 text-sunshine-foreground" },
-  { icon: Smile, label: "Joy of Learning", emoji: "😊", color: "bg-leaf/15 text-leaf" },
+  { icon: Lightbulb, label: "Creativity", emoji: "🎨", color: "bg-sunshine/15 text-sunshine-foreground" },
+  { icon: Smile, label: "Indian Values", emoji: "🙏", color: "bg-leaf/15 text-leaf" },
 ];
 
 const AboutSection = () => {
@@ -43,7 +43,8 @@ const AboutSection = () => {
           <p className="font-body text-lg text-muted-foreground leading-relaxed">
             At Freedom Preschool & Daycare, we believe every child is unique and full of potential.
             Our mission is to provide a warm, stimulating environment where children develop holistically —
-            intellectually, emotionally, socially, and physically — through play-based, activity-driven learning.
+            intellectually, emotionally, socially, and physically — through play-based, activity-driven learning,
+            rooted in Indian values and enriched with global perspectives. 🐘🦚🪷
           </p>
         </motion.div>
 
@@ -90,7 +91,8 @@ const AboutSection = () => {
           <h3 className="font-display text-xl font-bold text-foreground mb-3">Our Vision</h3>
           <p className="font-body text-muted-foreground leading-relaxed">
             To be the most trusted and loved early childhood learning center where every child feels
-            free to explore, imagine, and grow into confident, compassionate learners.
+            free to explore, imagine, and grow into confident, compassionate learners — celebrating
+            India's rich heritage of animals 🐯, art 🎨, alphabets 🔤, and traditions 🪔.
           </p>
         </motion.div>
       </div>
