@@ -68,6 +68,11 @@ export default {
           foreground: "hsl(var(--leaf-foreground))",
         },
         peach: "hsl(var(--peach))",
+        purple: {
+          DEFAULT: "hsl(var(--purple))",
+          foreground: "hsl(var(--purple-foreground))",
+          light: "hsl(var(--purple-light))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

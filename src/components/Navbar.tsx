@@ -16,12 +16,12 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md shadow-card">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md shadow-bold">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         <a href="#home" className="flex items-center gap-2">
           <span className="text-2xl">🌈</span>
-          <span className="font-display text-xl font-bold text-foreground">
-            Freedom <span className="text-primary">Preschool</span>
+          <span className="font-display text-xl font-bold text-primary-foreground">
+            Freedom <span className="text-sunshine">Preschool</span>
           </span>
         </a>
 
@@ -31,14 +31,14 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="font-body text-sm font-semibold text-muted-foreground hover:text-primary transition-colors"
+              className="font-body text-sm font-semibold text-primary-foreground/80 hover:text-sunshine transition-colors"
             >
               {link.label}
             </a>
           ))}
           <a
             href="tel:+911234567890"
-            className="flex items-center gap-2 rounded-full bg-primary px-5 py-2 font-body text-sm font-bold text-primary-foreground hover:opacity-90 transition-opacity"
+            className="flex items-center gap-2 rounded-full bg-sunshine px-5 py-2 font-body text-sm font-bold text-sunshine-foreground hover:opacity-90 transition-opacity shadow-bold"
           >
             <Phone size={14} />
             Call Us
@@ -48,7 +48,7 @@ const Navbar = () => {
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-foreground"
+          className="md:hidden text-primary-foreground"
           aria-label="Toggle menu"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -62,7 +62,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-card border-t border-border overflow-hidden"
+            className="md:hidden bg-primary border-t border-primary-foreground/10 overflow-hidden"
           >
             <div className="flex flex-col gap-2 px-4 py-4">
               {navLinks.map((link) => (
@@ -70,14 +70,14 @@ const Navbar = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="font-body text-sm font-semibold text-muted-foreground hover:text-primary py-2 transition-colors"
+                  className="font-body text-sm font-semibold text-primary-foreground/80 hover:text-sunshine py-2 transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
               <a
                 href="tel:+911234567890"
-                className="flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 font-body text-sm font-bold text-primary-foreground mt-2"
+                className="flex items-center justify-center gap-2 rounded-full bg-sunshine px-5 py-3 font-body text-sm font-bold text-sunshine-foreground mt-2"
               >
                 <Phone size={14} />
                 Call Us

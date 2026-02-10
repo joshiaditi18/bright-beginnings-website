@@ -11,9 +11,13 @@ const values = [
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-card relative overflow-hidden">
-      {/* Decorative doodle lines */}
-      <div className="absolute top-0 right-0 w-40 h-40 bg-sunshine/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-32 h-32 bg-pink/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+      {/* Doodle decorations */}
+      <svg className="absolute top-10 right-10 w-20 h-20 text-primary/10 hidden md:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2.5" strokeDasharray="6 5">
+        <circle cx="50" cy="50" r="35" />
+      </svg>
+      <svg className="absolute bottom-20 left-8 w-16 h-16 text-sunshine/20 hidden md:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3" strokeDasharray="5 6" strokeLinecap="round">
+        <path d="M20 80 L50 20 L80 80 Z" />
+      </svg>
 
       <div className="container mx-auto px-4">
         <motion.div
@@ -30,8 +34,9 @@ const AboutSection = () => {
           >
             🏫 About Us
           </motion.span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Nurturing Young Minds Since Day One{" "}
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6">
+            Nurturing Young Minds{" "}
+            <span className="text-primary">Since Day One</span>{" "}
             <motion.span
               className="inline-block"
               animate={{ rotate: [0, 10, -10, 0] }}
@@ -57,7 +62,7 @@ const AboutSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
               whileHover={{ scale: 1.08, y: -5 }}
-              className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-background shadow-card cursor-pointer group"
+              className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-background shadow-card cursor-pointer group doodle-border"
             >
               <motion.span
                 className="text-3xl"
@@ -79,7 +84,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 max-w-2xl mx-auto text-center bg-background rounded-3xl p-8 shadow-card"
+          className="mt-16 max-w-2xl mx-auto text-center bg-gradient-purple rounded-3xl p-8 shadow-bold text-primary-foreground"
         >
           <motion.span
             className="text-3xl block mb-3"
@@ -88,8 +93,8 @@ const AboutSection = () => {
           >
             🔭
           </motion.span>
-          <h3 className="font-display text-xl font-bold text-foreground mb-3">Our Vision</h3>
-          <p className="font-body text-muted-foreground leading-relaxed">
+          <h3 className="font-display text-xl font-bold mb-3">Our Vision</h3>
+          <p className="font-body text-primary-foreground/80 leading-relaxed">
             To be the most trusted and loved early childhood learning center where every child feels
             free to explore, imagine, and grow into confident, compassionate learners — celebrating
             India's rich heritage of animals 🐯, art 🎨, alphabets 🔤, and traditions 🪔.
