@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground py-10 relative overflow-hidden">
+    <footer className="bg-primary py-10 pb-20 relative overflow-hidden">
       {/* Floating stars */}
       {["⭐", "🌟", "✨"].map((star, i) => (
         <motion.span
@@ -50,7 +50,7 @@ const Footer = () => {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="font-body text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors"
+              className="font-body text-sm text-primary-foreground/50 hover:text-sunshine transition-colors"
             >
               {link}
             </a>
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
         <div className="border-t border-primary-foreground/10 pt-6">
           <p className="font-body text-xs text-primary-foreground/40 flex items-center justify-center gap-1">
-            Made with <Heart size={12} className="text-secondary" /> © {new Date().getFullYear()} Freedom Preschool & Daycare. All rights reserved.
+            Made with <Heart size={12} className="text-sunshine" /> © {new Date().getFullYear()} Freedom Preschool & Daycare. All rights reserved.
           </p>
         </div>
       </div>

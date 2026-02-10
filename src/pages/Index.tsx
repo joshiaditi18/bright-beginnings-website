@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import AdmissionTicker from "@/components/AdmissionTicker";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import FunFactsCounter from "@/components/FunFactsCounter";
@@ -12,11 +13,13 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import AdmissionsSection from "@/components/AdmissionsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import StickyAdmissionBar from "@/components/StickyAdmissionBar";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
+      <AdmissionTicker />
       <HeroSection />
       <AboutSection />
       <FunFactsCounter />
@@ -30,6 +33,7 @@ const Index = () => {
       <AdmissionsSection />
       <ContactSection />
       <Footer />
+      <StickyAdmissionBar />
     </div>
   );
 };

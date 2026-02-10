@@ -31,7 +31,7 @@ const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
   }, [inView, target]);
 
   return (
-    <span ref={ref} className="font-display text-4xl md:text-5xl font-extrabold text-foreground">
+    <span ref={ref} className="font-display text-4xl md:text-5xl font-extrabold text-primary-foreground">
       {count}{suffix}
     </span>
   );
@@ -39,20 +39,15 @@ const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
 
 const FunFactsCounter = () => {
   return (
-    <section className="py-16 bg-gradient-hero relative overflow-hidden">
-      {/* Decorative dots */}
-      <div className="absolute inset-0 opacity-30">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 rounded-full bg-primary/40"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-          />
-        ))}
-      </div>
+    <section className="py-16 bg-gradient-purple relative overflow-hidden">
+      {/* Doodle decorations */}
+      <svg className="absolute top-6 right-10 w-16 h-16 text-primary-foreground/10 hidden md:block" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3" strokeDasharray="6 5">
+        <circle cx="50" cy="50" r="35" />
+      </svg>
+      <svg className="absolute bottom-8 left-12 w-12 h-12 text-sunshine/30 hidden md:block" viewBox="0 0 100 100" fill="currentColor">
+        <rect x="40" y="15" width="20" height="70" rx="8" />
+        <rect x="15" y="40" width="70" height="20" rx="8" />
+      </svg>
 
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
@@ -73,7 +68,7 @@ const FunFactsCounter = () => {
                 {fact.emoji}
               </motion.span>
               <Counter target={fact.value} suffix={fact.suffix} />
-              <p className="font-body text-sm font-semibold text-muted-foreground mt-1">{fact.label}</p>
+              <p className="font-body text-sm font-semibold text-primary-foreground/70 mt-1">{fact.label}</p>
             </motion.div>
           ))}
         </div>
