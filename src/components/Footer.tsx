@@ -31,8 +31,20 @@ const Footer = () => {
           </span>
         </div>
         <p className="font-body text-sm text-primary-foreground/60 mb-6 max-w-md mx-auto">
-          Nurturing young minds with love, creativity, and care since Day One. 💛
+          Nurturing young minds with love, creativity, Indian values, and care since Day One. 🐘🪔💛
         </p>
+        <div className="flex justify-center gap-3 mb-6">
+          {["🐘", "🦁", "🦚", "🔤", "🔢", "🪔", "🇮🇳"].map((emoji, i) => (
+            <motion.span
+              key={i}
+              className="text-lg opacity-40"
+              animate={{ y: [0, -4, 0] }}
+              transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
+            >
+              {emoji}
+            </motion.span>
+          ))}
+        </div>
         <div className="flex items-center justify-center gap-6 mb-6">
           {["Home", "About", "Programs", "Contact"].map((link) => (
             <a

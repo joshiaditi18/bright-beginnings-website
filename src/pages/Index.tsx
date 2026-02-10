@@ -2,8 +2,11 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import FunFactsCounter from "@/components/FunFactsCounter";
+import AnimalParadeSection from "@/components/AnimalParadeSection";
+import LearningAdventuresSection from "@/components/LearningAdventuresSection";
 import ProgramsSection from "@/components/ProgramsSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import IndianCultureSection from "@/components/IndianCultureSection";
 import GallerySection from "@/components/GallerySection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import AdmissionsSection from "@/components/AdmissionsSection";
@@ -17,8 +20,11 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <FunFactsCounter />
+      <AnimalParadeSection />
+      <LearningAdventuresSection />
       <ProgramsSection />
       <WhyChooseUs />
+      <IndianCultureSection />
       <GallerySection />
       <TestimonialsSection />
       <AdmissionsSection />
