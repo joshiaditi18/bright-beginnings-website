@@ -191,8 +191,8 @@ const IndianCultureSection = () => {
           >
             🦚
           </motion.span>
-          <h4 className="font-display text-lg font-bold text-foreground mb-2">Did You Know?</h4>
-          <p className="font-body text-sm text-muted-foreground">
+          <h4 className="font-display text-lg font-bold text-primary-foreground mb-2">Did You Know?</h4>
+          <p className="font-body text-sm text-primary-foreground/80">
             The <strong>Peacock</strong> 🦚 is India's national bird, the <strong>Bengal Tiger</strong> 🐯 is our national animal, 
             and the <strong>Lotus</strong> 🪷 is our national flower! We teach children about India's beautiful symbols every day.
           </p>
