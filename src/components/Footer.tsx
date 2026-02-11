@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary py-10 pb-20 relative overflow-hidden">
+    <footer className="bg-primary py-10 pb-24 relative overflow-hidden">
       {/* Floating stars */}
       {["⭐", "🌟", "✨"].map((star, i) => (
         <motion.span
