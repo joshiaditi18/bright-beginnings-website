@@ -19,16 +19,7 @@ const StickyAdmissionBar = () => {
           <GraduationCap size={16} />
           <span>Admission Enquiry</span>
         </motion.a>
-        <div className="hidden sm:block w-px h-8 bg-sunshine-foreground/20" />
-        <motion.a
-          href="tel:+911234567890"
-          className="flex items-center gap-2 bg-primary-foreground/10 border-2 border-sunshine-foreground/20 rounded-full px-5 py-2.5 font-body text-sm font-bold text-sunshine-foreground hover:bg-primary-foreground/20 transition-colors"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <Phone size={16} />
-          <span>Call Now</span>
-        </motion.a>
+        {/* Call Now removed */}
       </div>
     </motion.div>
   );

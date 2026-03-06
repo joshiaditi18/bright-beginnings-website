@@ -1,15 +1,44 @@
 import { motion } from "framer-motion";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const galleryItems = [
-  { label: "Colorful Classroom", color: "bg-primary/10", emoji: "🎨", hoverColor: "hover:bg-primary/20" },
-  { label: "Outdoor Play Area", color: "bg-leaf/10", emoji: "🌳", hoverColor: "hover:bg-leaf/20" },
-  { label: "Animal Corner", color: "bg-sunshine/15", emoji: "🐘", hoverColor: "hover:bg-sunshine/25" },
-  { label: "Indian Dance Day", color: "bg-pink/10", emoji: "💃", hoverColor: "hover:bg-pink/20" },
-  { label: "ABC Learning", color: "bg-primary/10", emoji: "🔤", hoverColor: "hover:bg-primary/20" },
-  { label: "Number Fun", color: "bg-sunshine/15", emoji: "🔢", hoverColor: "hover:bg-sunshine/25" },
-  { label: "Diwali Celebration", color: "bg-peach/30", emoji: "🪔", hoverColor: "hover:bg-peach/40" },
-  { label: "Story Circle", color: "bg-leaf/10", emoji: "📖", hoverColor: "hover:bg-leaf/20" },
-  { label: "Music & Bhajans", color: "bg-pink/10", emoji: "🎵", hoverColor: "hover:bg-pink/20" },
+  { src: "/photos/annual1.jpeg", title: "Annual Day 1" },
+  { src: "/photos/annual2.jpeg", title: "Annual Day 2" },
+  { src: "/photos/annual3.jpeg", title: "Annual Day 3" },
+  { src: "/photos/annual4.jpeg", title: "Annual Day 4" },
+  { src: "/photos/annual5.jpeg", title: "Annual Day 5" },
+  { src: "/photos/annual6.jpeg", title: "Annual Day 6" },
+  { src: "/photos/anuual7.jpeg", title: "Annual Day 7" },
+  { src: "/photos/critmas.jpeg", title: "Christmas 1" },
+  { src: "/photos/critmas2.jpeg", title: "Christmas 2" },
+  { src: "/photos/ekadashi1.jpeg", title: "Diwali 1" },
+  { src: "/photos/ekadashi2.jpeg", title: "Diwali 2" },
+  { src: "/photos/ekadashi3.jpeg", title: "Diwali 3" },
+  { src: "/photos/ekadashi4.jpeg", title: "Diwali 4" },
+  { src: "/photos/ekadashi5.jpeg", title: "Diwali 5" },
+  { src: "/photos/ekadashi6.jpeg", title: "Diwali 6" },
+  { src: "/photos/ekadasi5.jpeg", title: "Diwali 7" },
+  { src: "/photos/ganeshjayanti1.jpeg", title: "Ganesh Jayanti 1" },
+  { src: "/photos/ganeshjayanti2.jpeg", title: "Ganesh Jayanti 2" },
+  { src: "/photos/ganeshjayanti3.jpeg", title: "Ganesh Jayanti 3" },
+  { src: "/photos/ganeshjayanti4.jpeg", title: "Ganesh Jayanti 4" },
+  { src: "/photos/janmasatmi.2.jpeg", title: "Janmashtami 1" },
+  { src: "/photos/janmasatmi.3.jpeg", title: "Janmashtami 2" },
+  { src: "/photos/janmasatmi.jpeg", title: "Janmashtami 3" },
+  { src: "/photos/janmasatmi4.jpeg", title: "Janmashtami 4" },
+  { src: "/photos/janmasatmi5.jpeg", title: "Janmashtami 5" },
+  { src: "/photos/janmasatmi6.jpeg", title: "Janmashtami 6" },
+  { src: "/photos/janmasatmi7.jpeg", title: "Janmashtami 7" },
+  { src: "/photos/pola1.jpeg", title: "Pola Festival 1" },
+  { src: "/photos/pola2.jpeg", title: "Pola Festival 2" },
+  { src: "/photos/pola3.jpeg", title: "Pola Festival 3" },
+  { src: "/photos/pola4.jpeg", title: "Pola Festival 4" },
+  { src: "/photos/pola5.jpeg", title: "Pola Festival 5" },
+  { src: "/photos/pola6.jpeg", title: "Pola Festival 6" },
+  { src: "/photos/republic1.jpeg", title: "Independence Day 1" },
+  { src: "/photos/republic2.jpeg", title: "Independence Day 2" },
+  { src: "/photos/tradition1.jpeg", title: "Tradition 1" },
+  { src: "/photos/yoga.jpeg", title: "Yoga Activity" },
 ];
 
 const GallerySection = () => {
@@ -49,29 +78,41 @@ const GallerySection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-          {galleryItems.map((item, i) => (
-            <motion.div
-              key={item.label}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              whileHover={{ scale: 1.05, rotate: i % 2 === 0 ? 2 : -2 }}
-              className={`aspect-square rounded-2xl ${item.color} ${item.hoverColor} flex items-center justify-center shadow-card hover:shadow-hover transition-all cursor-pointer group`}
-            >
-              <div className="text-center p-4">
-                <motion.span
-                  className="text-5xl mb-3 block"
-                  animate={{ y: [0, -5, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
-                >
-                  {item.emoji}
-                </motion.span>
-                <span className="font-display text-sm font-bold text-foreground">{item.label}</span>
-              </div>
-            </motion.div>
-          ))}
+        <div className="max-w-7xl mx-auto">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {galleryItems.map((item, i) => (
+                <CarouselItem key={item.src} className="md:basis-1/2 lg:basis-1/3">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: i * 0.05 }}
+                    whileHover={{ scale: 1.05 }}
+                    className="aspect-video rounded-2xl overflow-hidden shadow-card hover:shadow-hover transition-all cursor-pointer group"
+                  >
+                    <img
+                      src={item.src}
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-2">
+                      <p className="text-white text-xs font-semibold text-center">{item.title}</p>
+                    </div>
+                  </motion.div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
 
         <motion.p

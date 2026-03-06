@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Star, Sparkles } from "lucide-react";
-import heroImage from "@/assets/hero-children.jpg";
 
 const floatingEmojis = ["⭐", "🐘", "📚", "🦚", "🔤", "🎵", "🪔", "🦁", "🔢"];
 
@@ -85,15 +84,15 @@ const HeroSection = () => {
           </motion.div>
 
           <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight text-primary-foreground mb-6">
-            Build a Foundation{" "}
+            Freedom Park{" "}
             <br className="hidden md:block" />
-            for a Lifetime of{" "}
+            Preschool & Nursery{" "}
             <motion.span
               className="inline-block text-sunshine"
               animate={{ rotate: [0, -2, 2, 0] }}
               transition={{ duration: 4, repeat: Infinity }}
             >
-              Learning
+              Where Curiosity Meets Care
             </motion.span>{" "}
             <motion.span
               className="inline-block text-3xl md:text-5xl"
@@ -105,8 +104,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="font-body text-lg text-primary-foreground/80 max-w-lg mx-auto lg:mx-0 mb-4">
-            A safe, nurturing, and joyful learning space where your child discovers
-            creativity, confidence, and a love for learning every single day.
+            A trusted preschool and daycare centre in Wadmukhwadi, Pune, offering safe, engaging spaces where children learn, grow, and explore.
           </p>
 
           {/* Mini animated icons strip */}
@@ -187,9 +185,9 @@ const HeroSection = () => {
             <div className="absolute -inset-6 rounded-[2rem] bg-sunshine/30 rotate-3" />
             <div className="absolute -inset-4 rounded-[2rem] bg-primary-foreground/10 -rotate-2" />
             <img
-              src={heroImage}
+              src="/photos/a4.jpeg"
               alt="Happy children learning and playing at Freedom Preschool"
-              className="relative rounded-[2rem] shadow-bold w-full max-w-xl object-cover border-4 border-primary-foreground/20"
+              className="relative rounded-[2rem] shadow-bold w-full max-w-md object-cover border-4 border-primary-foreground/20"
             />
           </div>
         </motion.div>

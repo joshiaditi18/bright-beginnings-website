@@ -19,9 +19,9 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md shadow-bold">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         <a href="#home" className="flex items-center gap-2">
-          <span className="text-2xl">🌈</span>
-          <span className="font-display text-xl font-bold text-primary-foreground">
-            Freedom <span className="text-sunshine">Preschool</span>
+          <img src="/photos/logo.png" alt="Freedom Park Logo" className="h-12 w-auto object-contain" />
+          <span className="font-display text-xl font-bold text-primary-foreground hidden sm:inline">
+            FREEDOM PARK PRESCHOOL
           </span>
         </a>
 
@@ -36,13 +36,7 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <a
-            href="tel:+911234567890"
-            className="flex items-center gap-2 rounded-full bg-sunshine px-5 py-2 font-body text-sm font-bold text-sunshine-foreground hover:opacity-90 transition-opacity shadow-bold"
-          >
-            <Phone size={14} />
-            Call Us
-          </a>
+          {/* Call Us removed */}
         </div>
 
         {/* Mobile toggle */}
@@ -75,13 +69,7 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="tel:+911234567890"
-                className="flex items-center justify-center gap-2 rounded-full bg-sunshine px-5 py-3 font-body text-sm font-bold text-sunshine-foreground mt-2"
-              >
-                <Phone size={14} />
-                Call Us
-              </a>
+              {/* Call Us removed */}
             </div>
           </motion.div>
         )}
